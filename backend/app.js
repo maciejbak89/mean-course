@@ -8,7 +8,7 @@ const userRoutes = require('./routes/user');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://maciejbak:Dk7MwzTrIjauoPGb@cluster0-mbfcs.mongodb.net/node-angular?retryWrites=true')
+mongoose.connect('mongodb+srv://maciejbak:' + process.env.MONGO_ATLAS_PW + '@cluster0-mbfcs.mongodb.net/node-angular?retryWrites=true')
     .then(() => {
         console.log('Connected to MongoDB database!');
     })
